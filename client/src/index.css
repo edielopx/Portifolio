@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark Mode Styles */
+:root {
+  --background: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --primary: #3b82f6;
+  --secondary: #1d4ed8;
+  --accent: #60a5fa;
+  --gray-light: #f3f4f6;
+  --gray-medium: #9ca3af;
+  --gray-dark: #4b5563;
+  --border: #e5e7eb;
+  --card: #ffffff;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --navbar-bg: rgba(255, 255, 255, 0.8);
+}
+
+.dark {
+  --background: #111827;
+  --text-primary: #f9fafb;
+  --text-secondary: #e5e7eb;
+  --primary: #3b82f6;
+  --secondary: #60a5fa;
+  --accent: #93c5fd;
+  --gray-light: #374151;
+  --gray-medium: #6b7280;
+  --gray-dark: #9ca3af;
+  --border: #374151;
+  --card: #1f2937;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --navbar-bg: rgba(31, 41, 55, 0.8);
+}
+
+/* Apply CSS Variables */
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* CSS transition for smooth theme switching */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 0%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 0%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 0%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --primary: 0 0% 0%; /* Preto */
+  --primary-foreground: 0 0% 100%; /* Branco */
+  --secondary: 0 0% 80%; /* Prateado */
+  --secondary-foreground: 0 0% 0%;
+  --accent: 0 0% 70%; /* Prateado mais claro */
+  --accent-foreground: 0 0% 0%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 0 0% 0%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 0 0% 7%;
+  --foreground: 0 0% 98%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 65%;
+  --popover: 0 0% 7%;
+  --popover-foreground: 0 0% 98%;
+  --card: 0 0% 7%;
+  --card-foreground: 0 0% 98%;
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --primary: 0 0% 98%; /* Branco */
+  --primary-foreground: 0 0% 7%; /* Preto */
+  --secondary: 0 0% 60%; /* Prateado */
+  --secondary-foreground: 0 0% 7%;
+  --accent: 0 0% 50%; /* Prateado mais escuro */
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 0 0% 80%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.section-animate {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.section-animate.animate {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.progress-bar {
+  height: 8px;
+  border-radius: 4px;
+  background-color: var(--gray-light, #E5E7EB);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  background-color: hsl(var(--primary));
+  background-image: linear-gradient(45deg, 
+                     rgba(255,255,255,.15) 25%, 
+                     transparent 25%, 
+                     transparent 50%, 
+                     rgba(255,255,255,.15) 50%, 
+                     rgba(255,255,255,.15) 75%, 
+                     transparent 75%, 
+                     transparent);
+  background-size: 1rem 1rem;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
