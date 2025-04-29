@@ -2,6 +2,11 @@
 
 Este é um projeto de portfólio pessoal desenvolvido para Edielo Alves Paixão. O site exibe informações profissionais, habilidades e formas de contato em um layout moderno, responsivo e com experiência de usuário aprimorada.
 
+Acesse a Plataforma Online
+Acesse FreelanceHub diretamente pelo link:
+
+https://edielopx.com.br
+Não é necessário instalação! Basta acessar o link acima para começar a usar.
 ## Características do Projeto
 
 - **Design Minimalista**: Interface limpa com esquema de cores preto, branco e prata
