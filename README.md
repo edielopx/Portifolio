@@ -5,7 +5,7 @@ Este é um projeto de portfólio pessoal desenvolvido para Edielo Alves Paixão.
 Acesse a Plataforma Online
 Acesse FreelanceHub diretamente pelo link:
 
-https://edielopx.com.br
+https://edielox.replit.app
 Não é necessário instalação! Basta acessar o link acima para começar a usar.
 ## Características do Projeto
 
